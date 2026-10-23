@@ -62,7 +62,7 @@ b,em{font-style:normal;font-weight:500;color:var(--orange)}
 .scene{position:relative}
 .scene > .pin{position:sticky;top:var(--top,0px)}
 .scene:not(.hero) > .pin{padding-block:clamp(16px,3vh,32px)}
-.side > .pin{overflow:hidden;display:grid;gap:clamp(16px,2.5vh,28px)}
+.side > .pin{overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(16px,2.5vh,28px)}
 
 .track{display:flex;gap:clamp(16px,2.5vw,40px);padding-inline:max(calc(var(--pad) + var(--gutL)),calc((100vw - 1440px)/2 + var(--pad)));will-change:transform;width:max-content}
 .side-title{color:var(--orange);font-size:clamp(28px,4vw,56px);letter-spacing:-.03em;line-height:1}
@@ -155,7 +155,7 @@ b,em{font-style:normal;font-weight:500;color:var(--orange)}
 .sec-title{color:var(--orange);font-size:clamp(34px,5.4vw,84px);letter-spacing:-.04em;line-height:.95;padding-block:clamp(32px,4vw,56px) clamp(16px,2vw,28px);border-top:1px solid var(--rule)}
 
 /* byborre-style split: big image one side, title next to it */
-.split{display:grid;grid-template-columns:7fr 5fr;gap:clamp(20px,5vw,96px);padding-block:clamp(28px,4vw,64px);border-top:1px solid var(--rule);align-items:center}
+.split{display:grid;grid-template-columns:7fr 5fr;gap:clamp(20px,5vw,96px);padding-block:clamp(28px,4vw,64px);align-items:center}
 .split > *{min-width:0}
 .split.rev{grid-template-columns:5fr 7fr}
 .split.rev .s-img{order:2}
@@ -389,7 +389,7 @@ html.flat .end{margin-top:0}
 
   <section class="scene side" data-side>
     <div class="pin">
-      <div class="wrap"><div class="inner"><h3 class="side-title">Variety of 3D shapes filled with wireframes</h3></div></div>
+      <div class="wrap"><div class="inner"><h3 class="side-title" style="font-size:clamp(22px,2.6vw,36px)">Variety of 3D shapes filled with wireframes</h3></div></div>
       <div class="track">
         <figure class="fig-tall"><img src="img/sticks-variety-vase.jpg" alt="Rendered lattice vase"></figure>
         <figure class="fig-tall"><img src="img/sticks-variety-bottle.jpg" alt="Rendered tall lattice bottle"></figure>
